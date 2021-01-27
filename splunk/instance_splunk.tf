@@ -28,7 +28,7 @@ resource "aws_instance" "splunk_instance" {
    vpc_security_group_ids = [aws_security_group.splunk_sg.id]
    root_block_device {
      volume_type = "gp2"
-     volume_size = 16
+     volume_size = 48
    }
    user_data = file("${path.module}/user_data_splunk.sh")
 
